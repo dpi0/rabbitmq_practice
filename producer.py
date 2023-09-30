@@ -1,17 +1,6 @@
-# from driver import ProdClass
+from driver import ProdClass
 from time import sleep
 from random import randint
-from pika import ConnectionParameters, BlockingConnection
-
-
-class ProdClass:
-    def __init__(self) -> None:
-        self.connection_params = ConnectionParameters("localhost")
-        self.connection = BlockingConnection(self.connection_params)
-
-    def create_channel(self):
-        channel = self.connection.channel()
-        return channel
 
 
 producer = ProdClass()
